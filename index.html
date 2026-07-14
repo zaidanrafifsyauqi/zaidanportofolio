@@ -818,7 +818,7 @@ footer{ border-top:1px solid var(--border); padding:40px 0; position:relative; z
 ============================================================ -->
 <footer>
   <div class="shell footer-inner">
-    <p>&copy; <span id="year"></span> Zaidan Rafif Syauqi. Built with intent.</p>
+    <p>&copy; <span id="year"></span> Zaidan Rafif Syauqi. Built with love.</p>
     <a href="#home" class="to-top" aria-label="Back to top">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
     </a>
@@ -845,7 +845,7 @@ const CONFIG = {
   linkedin: "https://linkedin.com/in/zaidanrafifsyauqi/",
   github: "https://github.com/zaidanrafifsyauqi",
   portfolio: "https://rebrand.ly/portfoliozaidanrafifsyauqi",
-  cvUrl: "#",
+  cvUrl: "CV_ZaidanRafifSyauqi.pdf",
   photo: "images/zaidan.jpeg",
 
   typingRoles: ["Software Engineer", "React Developer", "Flutter Developer", "Full Stack Developer"],
@@ -859,12 +859,42 @@ const CONFIG = {
   ],
 
   skills: {
-    "Frontend": ["React.js","JavaScript (ES6+)","HTML5","CSS3","Tailwind CSS","Bootstrap","Axios","Context API","Responsive Web Design"],
-    "Backend": ["Laravel","PHP","REST API","MySQL"],
-    "Mobile": ["Flutter","Dart","GetX"],
-    "Tools": ["Git","GitHub","Postman","Trello","Figma","Deployment & Web Hosting"],
-    "Concepts": ["Component-Based Architecture","Cross-Browser Compatibility","SEO Optimization","UI/UX Implementation"]
-  },
+  "Frontend": [
+    "React.js",
+    "JavaScript (ES6+)",
+    "HTML5",
+    "CSS3",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Axios",
+    "Context API"
+  ],
+  "Backend": [
+    "Laravel",
+    "PHP",
+    "RESTful API",
+    "MySQL"
+  ],
+  "Mobile": [
+    "Flutter",
+    "Dart",
+    "GetX"
+  ],
+  "Tools": [
+    "Git",
+    "GitHub",
+    "Postman",
+    "Figma",
+    "Trello"
+  ],
+  "Concepts": [
+    "Responsive Web Design",
+    "REST API Integration",
+    "Component-Based Architecture",
+    "Cross-Browser Compatibility",
+    "State Management"
+  ]
+},
 
   experience: [
     {
@@ -1047,7 +1077,10 @@ function el(tag, cls, html){ const e=document.createElement(tag); if(cls) e.clas
     a.setAttribute('aria-label', it.label);
     wrap.appendChild(a);
   });
-  document.getElementById('downloadCv').href = CONFIG.cvUrl;
+  const downloadBtn = document.getElementById("downloadCv");
+
+downloadBtn.href = CONFIG.cvUrl;
+downloadBtn.setAttribute("download", "CV_ZaidanRafifSyauqi.pdf");
 })();
 
 // About text + highlight cards
